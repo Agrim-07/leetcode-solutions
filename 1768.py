@@ -5,9 +5,10 @@ for i in a:
     l.append(i)
 for i in range (len(b)):
     if i>=len(a):
-        l.insert(i,b[i])
+        l.append(b[i])
     else:
-        l.insert(i+1,b[i])
+        if i%2==1:
+            l.insert(i,b[i])
 x=""
 for i in l:
     x+=i
