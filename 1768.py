@@ -25,3 +25,4 @@ else:
             l+=1
     for y in range (l,len(b)):
         s+=a[y]
+print(s)
