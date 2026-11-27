@@ -1,13 +1,27 @@
 a=input()
 b=input()
 s=""
-j=0
-i=0
-for x in range (len(a)+len(b)):
-    if x%2==0:
-        s+=a[i]
-        i+=1
-    else:
-        s+=b[j]
-        j+=1
-print(s)
+i=len(a)
+j=len(b)
+k=0
+l=0
+if (i>j):
+    for x in range (2*j):
+        if x%2==0:
+            s+=a[k]
+            k+=1
+        else:
+            s+=b[l]
+            l+=1
+    for y in range (k,len(a)):
+            s+=a[y]
+else:
+    for x in range (2*i):
+        if x%2==0:
+            s+=a[k]
+            k+=1
+        else:
+            s+=b[l]
+            l+=1
+    for y in range (l,len(b)):
+        s+=a[y]
