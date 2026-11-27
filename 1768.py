@@ -25,6 +25,6 @@ else:
             s+=b[l]
             l+=1
     for y in range (l,len(b)):
-        s+=a[y]
+        s+=b[y]
         l+=1
 print(s)
