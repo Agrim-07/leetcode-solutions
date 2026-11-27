@@ -4,7 +4,7 @@ l=[]
 j=0
 for i in a: 
     l.append(i)
-for i in range (len(b)):
+for i in range (len(b)+len(a)):
     if i>=len(a):
         l.append(b[i])
     else:
