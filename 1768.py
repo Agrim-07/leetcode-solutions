@@ -15,6 +15,7 @@ if (i>j):
             l+=1
     for y in range (k,len(a)):
             s+=a[y]
+            k+=1
 else:
     for x in range (2*i):
         if x%2==0:
@@ -25,4 +26,5 @@ else:
             l+=1
     for y in range (l,len(b)):
         s+=a[y]
+        l+=1
 print(s)
