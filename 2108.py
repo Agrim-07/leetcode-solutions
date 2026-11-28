@@ -1,13 +1,20 @@
-list_of_strings=[]
-number_of_strings_in_the_list=int(input("Enter number of strings in the array"))
-for i in range(number_of_strings_in_the_list):
-    print("Enter the string at position " + str(i+1) + " : ")
-    list_of_strings.append(input())
-h=0
-for i in list_of_strings:
-    if i[::1]==i[::-1]:
-        print(i)
-        h+=1
-        break
-if h==0:
-    print("")
+def read_strings():
+    count = int(input("Enter number of strings in the array: "))
+    strings = []
+    for position in range(1, count + 1):
+        strings.append(input("Enter the string at position " + str(position) + " : "))
+    return strings
+
+
+def is_palindrome(word):
+    return word == word[::-1]
+
+
+def first_palindrome(words):
+    for word in words:
+        if is_palindrome(word):
+            return word
+    return ""
+
+
+print(first_palindrome(read_strings()))
